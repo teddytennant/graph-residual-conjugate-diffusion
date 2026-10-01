@@ -1,0 +1,23 @@
+[project]
+name = "grcd"
+version = "0.1.0"
+description = "Graph Residual Conjugate Diffusion kernel"
+requires-python = ">=3.11"
+dependencies = [
+    "jax",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
